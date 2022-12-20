@@ -1,12 +1,17 @@
-import { ChakraProvider, Heading } from "@chakra-ui/react";
-import { theme } from "../styles";
+import { Button as ChakraButton } from "@chakra-ui/react";
 
-export function App() {
+export const Button = () => {
   return (
-    <ChakraProvider theme={theme}>
-      <Heading color="ignite300" margin="1">
-        Hello word
-      </Heading>
-    </ChakraProvider>
+    <ChakraButton
+      background="pink"
+      border={0}
+      borderRadius="sm"
+      p="2 4"
+      fontFamily="default"
+      color="white"
+      fontWeight="bold"
+    >
+      Button
+    </ChakraButton>
   );
-}
+};
