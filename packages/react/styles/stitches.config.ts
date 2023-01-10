@@ -1,4 +1,3 @@
-import { extendTheme } from "@chakra-ui/react";
 import {
   breakpoints,
   colors,
@@ -10,7 +9,18 @@ import {
   space,
 } from "@ignite-ui/tokens";
 
-export const theme = extendTheme({
+import { createStitches } from "@stitches/react";
+
+export const {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+  config,
+} = createStitches({
   theme: {
     colors: colors,
     breakpoints: breakpoints,
@@ -21,10 +31,7 @@ export const theme = extendTheme({
     lineHeights: lineHeights,
     space: space,
   },
-
-  styles: {
-    global: {
-      body: {},
-    },
+  media: {
+    bp1: "(min-width: 480px)",
   },
 });
